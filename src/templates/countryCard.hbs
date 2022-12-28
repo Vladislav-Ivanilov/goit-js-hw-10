@@ -1,0 +1,24 @@
+{{#each this}}
+  <ul class='list country-block'>
+    <li>
+      <ul class='list country-card__list'>
+        <li><img
+            class='country-card__img'
+            src='{{flags.svg}}'
+            alt={{name.official}}
+            width='60'
+            height='40'
+          /></li>
+        <li class='text'>{{name.official}}</li>
+      </ul></li>
+
+    <li>
+      <ul class='list'>
+        <li><span class='span'>Capital:</span>{{capital}}</li>
+        <li><span class='span'>Population:</span>{{population}}</li>
+        <li><span class='span'>Languages:</span>{{#each languages}}
+            {{this}}{{/each}}</li>
+      </ul>
+    </li>
+  </ul>
+{{/each}}
